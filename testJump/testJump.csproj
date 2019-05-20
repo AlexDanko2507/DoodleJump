@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C104712-C785-4C1F-84A5-F872DE4D5F61}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>testJump</RootNamespace>
+    <AssemblyName>testJump</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blue.cs" />
+    <Compile Include="Bonus.cs" />
+    <Compile Include="Bullet.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameEnd.Designer.cs">
+      <DependentUpon>GameEnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Green.cs" />
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Monsters.cs" />
+    <Compile Include="Platforms.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Red.cs" />
+    <Compile Include="Scores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scores.Designer.cs">
+      <DependentUpon>Scores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="White.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameEnd.resx">
+      <DependentUpon>GameEnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Scores.resx">
+      <DependentUpon>Scores.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bck%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleJump.ttf" />
+    <None Include="Resources\underwater-left%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\underwater-right%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\underwater-up%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\platform.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prigunki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\propelleer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pruzhina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rocket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-on%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doodle-jump%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hole%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-on%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pauseOnBck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseOnPlay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-again%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-again-on%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-on%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resume%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resumeOn%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scoreOn%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alien1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alien2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alien3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alien4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alien5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bug1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bug2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bug3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options-on%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scoresBck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1489085655_doodle-jump-2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
